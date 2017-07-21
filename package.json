@@ -1,5 +1,5 @@
 {
-  "name": "twitter",
+  "name": "socialTwitter",
   "version": "1.0.0",
   "description": "",
   "main": "app-express.js",
@@ -10,6 +10,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.0.0",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
@@ -21,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saikishan/Twitter.git"
+    "url": "git+https://github.com/saikishan/socialTwitter.git"
   },
   "author": "kishan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saikishan/Twitter/issues"
+    "url": "https://github.com/saikishan/socialTwitter/issues"
   },
-  "homepage": "https://github.com/saikishan/Twitter#readme"
+  "homepage": "https://github.com/saikishan/socialTwitter#readme"
 }
