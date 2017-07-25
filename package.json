@@ -4,6 +4,7 @@
   "description": "",
   "main": "app-express.js",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.3",
@@ -15,6 +16,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "jwt-simple": "^0.5.1",
+    "lodash": "^4.17.4",
     "mongoose": "^4.10.2"
   },
   "devDependencies": {},
