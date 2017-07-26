@@ -104,14 +104,11 @@ var router = require('express').Router();
         });
     });
     router.post('/',function(req,res){
-        console.log("the status to post");
-        console.log(req.body);
         var post = new Post({
-         username: req.body.username,
             body: req.body.body
         });
+        post.username = req.auth.username;
         post.save(function(err,post){
-        if(err) console.log("we got a error");
         if(err) { return next(err) }
         res.status(201).json(post)
     });
