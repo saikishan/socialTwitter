@@ -7,7 +7,6 @@ var fs = require('fs');
 fs.readdirSync(__dirname+'/gulp').forEach(function(task){
     require('./gulp/'+task);
 });
-gulp.task('dev',['watch:js','watch:css','dev:server']);
 gulp.task('js',function(){
     gulp.src(['ng/module.js','ng/**/*.js'])
     .pipe(sourcemaps.init())
@@ -23,3 +22,4 @@ gulp.task('watch:js',function(){
 gulp.task('watch:css',function(){
     gulp.watch('css/**/*.styl',['css']);
 });
+gulp.task('dev',['watch:js','watch:css','dev:server']);
