@@ -7,7 +7,7 @@
             <span>{{post.body}}</span>
         </li>
     </ul>
-    <div >
+    <div ng-if="currentUser">
         <input ng-model="postBody" class='form-control'/>
         <button ng-click='addPost()' class="btn btn-default">Add post</button>
     </div>    
