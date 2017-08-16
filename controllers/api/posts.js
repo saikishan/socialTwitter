@@ -12,6 +12,7 @@ var router = require('express').Router();
         var post = new Post({
             body: req.body.body
         });
+        console.log('new post is aarriverd');
         post.username = req.auth.username;
         post.save(function(err,post){
         if(err) { return next(err) }
