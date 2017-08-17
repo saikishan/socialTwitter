@@ -1,6 +1,7 @@
 angular.module('app').controller('PostsCtrl',function($scope,PostsSvc){
     $scope.addPost = function(){
         console.log("entered on to addpost()");
+        console.log($scope.postBody);
         if($scope.postBody){
             PostsSvc.create({
                 username: 'kishan',
