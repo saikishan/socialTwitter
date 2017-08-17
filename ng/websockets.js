@@ -12,7 +12,6 @@ angular.module('app')
         }
         connection.onmessage = function(e){
             var payload = JSON.parse(e.data);
-            console.log("e data is");
             console.log(e.data);
             $rootScope.$broadcast('ws:'+payload.topic,payload.data)
         }

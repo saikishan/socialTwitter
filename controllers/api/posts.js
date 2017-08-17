@@ -1,4 +1,5 @@
 var websockets = require('../../websockets')
+var pubsub = require('pubsub-js')
 var Post = require('../../models/post');
 var router = require('express').Router();
     router.get('/',function(req,res,next){
@@ -16,8 +17,12 @@ var router = require('express').Router();
         post.username = req.auth.username;
         post.save(function(err,post){
         if(err) { return next(err) }
-        websockets.broadcast('new_post',post);
-        res.status(201).json(post)
+        pubsub.publish('new_post', post);
+        res.status(201)//.json(post)
     });
 });
+pubsub.subscribe('new_post',function (_,post){
+    console.log(post)
+    websockets.broadcast('new_post',post)
+})
 module.exports = router;
